@@ -1,6 +1,5 @@
 # mngs
 
-<img src="https://travis-ci.org/jondot/mngs.svg?branch=master">
 
 A pleasant CLI for rapid development with Mongoose.
 
