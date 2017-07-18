@@ -1,8 +1,11 @@
 {
   "name": "mngs",
-  "version": "1.0.2",
-  "description": "A fast, sandboxed matching engine with serializable rules",
+  "version": "1.0.3",
+  "description": "A pleasant CLI for rapid development with Mongoose.",
   "main": "src/index.js",
+  "repository":{
+      "url":"https://github.com/jondot/mngs"
+  },
   "bin":{
       "mngs":"src/index.js"
   },
