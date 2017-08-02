@@ -25,13 +25,12 @@ console.log(Object.keys(models).join('\n'))
 
 const objectify = m => x => {
   // just always use toJSON for sequelize.
-  m = isSequelize(x) ? 'toJSON' : m
+  const invoke = o => (o[m] || o['toJSON']).bind(o)()
 
-  if (x[m]) {
-    return x[m]()
-  }
   if (L.isArray(x)) {
-    return L.map(x, _ => _[m]())
+    return L.map(x, invoke)
+  } else {
+    return invoke(x)
   }
   return x
 }

@@ -1,6 +1,6 @@
 {
   "name": "hyperportal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A pleasant CLI for rapid development with Mongoose.",
   "main": "src/index.js",
   "repository":{
