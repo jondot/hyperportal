@@ -1,7 +1,7 @@
-# mngs
+# Hyperportal
 
 
-A pleasant CLI for rapid development with Mongoose.
+A pleasant CLI for rapid development with Sequelize or Mongoose.
 
 ![](media/mngs.gif)
 
@@ -9,18 +9,18 @@ A pleasant CLI for rapid development with Mongoose.
 ## Quickstart
 
 ```
-$ yarn add --dev mngs
+$ yarn add --dev hyperportal
 ```
 
-And add the following script to your `package.json` file:
+And add the following script to your `package.json` file. Let's call it 'console'.
 
 ```json
 "scripts":{
-    "mongoose":"MNGS_MODELS=config/mngs.js mngs"
+    "console":"HYP_MODELS=config/hyperportal.js hyp"
 }
 ```
 
-And here's how `config/mngs.js` looks like:
+And here's how `config/hyperportal.js` looks like, when you're using Mongoose:
 
 ```javascript
 // connects mongoose. grab your own setup
@@ -31,9 +31,15 @@ const models = require(path.join(__dirname, '../models'))
 module.exports = models
 ```
 
+And now, run:
+
+```
+$ yarn console
+```
+
 # Usage
 
-Use your models (they are exposed directly) to print `p`, log `l`, and display on a table `t`.
+Use your models (they are already available in the console) to print `p`, log `l`, and display on a table `t`.
 Additionally you can simulate a `toJSON` with `js` to see what part of your model is exposed.
 
 ```
@@ -51,7 +57,7 @@ Fork, implement, add tests, pull request, get my everlasting thanks and a respec
 
 ### Thanks:
 
-To all [Contributors](https://github.com/jondot/mngs/graphs/contributors) - you make this happen, thanks!
+To all [Contributors](https://github.com/jondot/hyperportal/graphs/contributors) - you make this happen, thanks!
 
 
 # Copyright

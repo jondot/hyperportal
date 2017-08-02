@@ -8,13 +8,15 @@ const { table } = require('table')
 
 // we don't need to see this file.
 __locus_modules__.print = Object.assign(__locus_modules__.print, {
-  file: () => {},
+  file: () => {}
 })
 
 const models = require(path.join(
   process.cwd(),
-  process.env.MNGS_MODELS || path.join(__dirname, '../config/mngs')
+  process.env.HYP_MODELS || path.join(__dirname, '../config/mngs')
 ))
+
+const isSequelize = Model => !!Model.QueryInterface
 
 // load up models
 Object.assign(global, models)
@@ -22,6 +24,9 @@ console.log('Models:\n=======')
 console.log(Object.keys(models).join('\n'))
 
 const objectify = m => x => {
+  // just always use toJSON for sequelize.
+  m = isSequelize(x) ? 'toJSON' : m
+
   if (x[m]) {
     return x[m]()
   }

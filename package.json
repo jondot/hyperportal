@@ -1,13 +1,13 @@
 {
-  "name": "mngs",
-  "version": "1.0.3",
+  "name": "hyperportal",
+  "version": "1.0.4",
   "description": "A pleasant CLI for rapid development with Mongoose.",
   "main": "src/index.js",
   "repository":{
-      "url":"https://github.com/jondot/mngs"
+      "url":"https://github.com/jondot/hyperportal"
   },
   "bin":{
-      "mngs":"src/index.js"
+      "hyp":"src/index.js"
   },
   "scripts": {
     "test": "jest",
