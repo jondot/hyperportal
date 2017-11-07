@@ -1,13 +1,14 @@
 {
   "name": "hyperportal",
-  "version": "1.0.5",
-  "description": "A pleasant CLI for rapid development with Mongoose.",
+  "version": "1.0.6",
+  "description":
+    "A pleasant CLI for rapid data development with Sequelize and Mongoose.",
   "main": "src/index.js",
-  "repository":{
-      "url":"https://github.com/jondot/hyperportal"
+  "repository": {
+    "url": "https://github.com/jondot/hyperportal"
   },
-  "bin":{
-      "hyp":"src/index.js"
+  "bin": {
+    "hyp": "src/index.js"
   },
   "scripts": {
     "test": "jest",
@@ -15,9 +16,7 @@
     "bench": "node src/__tests__/index.bench.js"
   },
   "jest": {
-    "testMatch": [
-      "**/?(*.)(spec|test).js?(x)"
-    ]
+    "testMatch": ["**/?(*.)(spec|test).js?(x)"]
   },
   "author": "Dotan Nahum <jondotan@gmail.com> (http://paracode.com)",
   "license": "MIT",

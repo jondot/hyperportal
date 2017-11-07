@@ -13,7 +13,7 @@ __locus_modules__.print = Object.assign(__locus_modules__.print, {
 
 const models = require(path.join(
   process.cwd(),
-  process.env.HYP_MODELS || path.join(__dirname, '../config/mngs')
+  process.env.HYP_MODELS || path.join(__dirname, '../config/hyperportal')
 ))
 
 const isSequelize = Model => !!Model.QueryInterface
